@@ -48,7 +48,7 @@ const startCity = "Kiev";
 const travelRoute = findRoute(startCity, tickets);
 console.log(travelRoute.join(" -> "));
 
-}
+
 ```
 # Explanation
 
