@@ -1,5 +1,5 @@
 # Assignment 1
-
+- Hosted-Link - [https://simplyfi-frontend.vercel.app/]
 ## Explanation
 
 - Resets margin and padding for all elements, sets box-sizing to border-box.
@@ -10,17 +10,19 @@
 - Centers the text within the logo and rotates it back to align horizontally. The text2 class positions the subtext below the main text.
 
 ## Screenshot
-![Logo Screenshot](../../Pictures/Screenshot%20from%202024-07-30%2013-52-53.png)
+![Screenshot from 2024-07-30 13-52-53](https://github.com/user-attachments/assets/3600b657-abc6-4def-ad71-c1964d943863)
+
 
 # Assignment 2
 
 - Q . Your son took a vacation through Europe without telling you. When the kid returned from the vacation you asked him where did he go. The kid told you: Dad I went to these cities: Amsterdam, Kiev, Zurich, Prague, Berlin, Barcelona.
   I used only train as transportation and these were the available tickets:
   Paris-Skopje, Zurich-Amsterdam, Prague-Zurich, Barcelona-Berlin, Kiev-Prague, Skopje-Paris, Amsterdam-Barcelona, Berlin-Kiev, Berlin-Amsterdam.
-  You know that your kid started with Kiev
+  You know that your kid started with Kiev.
   Write a data structure and algorithm that will give you the route which your son was traveling.
-
-- function findRoute(startCity, tickets) {
+# Solution
+```Solution
+function findRoute(startCity, tickets) {
   let route = [startCity];
   let currentCity = startCity;
       while (route.length < 6) {
@@ -46,6 +48,8 @@ const startCity = "Kiev";
 const travelRoute = findRoute(startCity, tickets);
 console.log(travelRoute.join(" -> "));
 
+}
+```
 # Explanation
 
 - We define a findRoute function that takes the starting city and the list of tickets.
@@ -57,14 +61,7 @@ console.log(travelRoute.join(" -> "));
 - We split each ticket into 'from' and 'to' cities.
 - If the 'from' city matches our current city and we haven't visited the 'to' city yet, we add the 'to' city to our route and make it our new current city.
 - We then break out of the ticket loop to start looking for the next city.
-
 - Once we've visited all cities, we return the route.
 
-This approach is simpler because:
-
-- It doesn't use recursion or complex data structures.
-- It follows a straightforward, step-by-step process to build the route.
-- It's easier to understand and debug.
-
-When you run this code, it will output the route your son traveled:
-CopyKiev -> Prague -> Zurich -> Amsterdam -> Barcelona -> Berlin
+ When you run this code, it will output the route your son traveled:
+ Kiev -> Prague -> Zurich -> Amsterdam -> Barcelona -> Berlin
